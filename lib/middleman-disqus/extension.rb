@@ -1,6 +1,6 @@
 module Middleman
-  module GoogleAnalytics
-    class Options < Struct.new(:disqus_id); end
+  module Disqus
+    class Options < Struct.new(:shortname); end
 
     class << self
       def options
@@ -19,8 +19,7 @@ module Middleman
     module InstanceMethods
       def disqus
         options = ::Middleman::Disqus.options
-        options.debug ||= not build?
-        ga = options.debug ? 'ga' : '/u/ga_debug'
+        # options.debug ||= not build?
         if shortname = options.shortname
           %Q{<div id="disqus_thread"></div>
               <script type="text/javascript">
