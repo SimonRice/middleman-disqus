@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Simon Rice"]
   s.email       = ["im@simonrice.com"]
   s.homepage    = "http://github.com/simonrice/middleman-disqus"
+  s.license     = 'MIT'
   s.summary     = %q{A Middleman plugin for adding the Disqus embed code.}
   # s.description = %q{A longer description of your extension}
 
