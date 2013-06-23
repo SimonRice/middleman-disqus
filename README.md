@@ -4,6 +4,8 @@ Middleman-Disqus is a [Middleman](https://github.com/middleman/middleman)
 extension that generates the Disqus embed code, and keeps your config
 in `config.rb`, where it belongs.
 
+This plugin is based on [middleman-google-analytics](https://github.com/MrJoy/middleman-google-analytics).
+
 ## Installation
 
 If you already have a Middleman project:
@@ -17,7 +19,7 @@ activate :disqus do |d|
 end
 ```
 
-Then, in your layout, after your footer, call `disqus_tag` and
+Then, in your relevant layout(s), after your footer, call `disqus_tag` and
 include the results in the page.  For example, in HAML:
 
 ```haml
@@ -45,7 +47,7 @@ end
 
 configure :build do
   activate :disqus do |d|
-    ga.tracking_id = 'UA-XXXXXXX-X'
+    d.shortname = "your_shortname"
   end
 end
 ```
@@ -53,7 +55,7 @@ end
 ## Usage
 
 Once you've bundled you should be able to run middleman as normal, and have it
-display the GA tracking code.
+display the Disqus comments box.
 
 ## License
 

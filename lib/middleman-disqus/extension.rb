@@ -17,7 +17,7 @@ module Middleman
     end
 
     module InstanceMethods
-      def disqus_tag
+      def disqus
         options = ::Middleman::Disqus.options
         options.debug ||= not build?
         ga = options.debug ? 'ga' : '/u/ga_debug'
