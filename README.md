@@ -23,13 +23,13 @@ Then, in your relevant layout(s), after your footer, call `disqus_tag` and
 include the results in the page.  For example, in HAML:
 
 ```haml
-= disqus_tag
+= disqus
 ```
 
 Or ERB:
 
 ```erb
-<%= disqus_tag %>
+<%= disqus %>
 ```
 
 ## Only Including Embed Code in Builds
