@@ -1,5 +1,8 @@
 # Middleman Disqus
 
+[![Dependency Status](https://gemnasium.com/simonrice/middleman-disqus.png)](https://gemnasium.com/simonrice/middleman-disqus) 
+[![Code Climate](https://codeclimate.com/github/simonrice/middleman-disqus.png)](https://codeclimate.com/github/simonrice/middleman-disqus)
+
 Middleman-Disqus is a [Middleman](https://github.com/middleman/middleman)
 extension that generates the Disqus embed code, and keeps your config
 in `config.rb`, where it belongs.

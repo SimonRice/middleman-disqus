@@ -19,12 +19,11 @@ module Middleman
     module InstanceMethods
       def disqus
         options = ::Middleman::Disqus.options
-        # options.debug ||= not build?
         if shortname = options.shortname
           %Q{<div id="disqus_thread"></div>
               <script type="text/javascript">
               //<![CDATA[
-                  var disqus_shortname = '#{shortname}'; // required: replace example with your forum shortname
+                  var disqus_shortname = '#{shortname}';
                   (function() {
                       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                       dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
