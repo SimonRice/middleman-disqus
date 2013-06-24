@@ -22,7 +22,7 @@ activate :disqus do |d|
 end
 ```
 
-Then, in your relevant layout(s), after your footer, call `disqus_tag` and
+Then, in your relevant layout(s), after your footer, call `disqus` and
 include the results in the page.  For example, in HAML:
 
 ```haml
