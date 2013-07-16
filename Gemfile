@@ -10,8 +10,7 @@ group :development do
 end
 
 group :test do
-  gem "cucumber", "~> 1.2.0"
-  gem "fivemat"
-  gem "aruba",    "~> 0.4.11"
-  gem "rspec",    "~> 2.7"
+  gem "cucumber", "~> 1.3.4"
+  gem "fivemat",  "~> 1.2.1"
+  gem "aruba",    "~> 0.5.3"
 end
