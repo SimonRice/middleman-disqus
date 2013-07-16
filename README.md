@@ -1,5 +1,6 @@
 # Middleman Disqus
 
+[![Build Status](https://travis-ci.org/simonrice/middleman-disqus.png)](https://travis-ci.org/simonrice/middleman-disqus)
 [![Gem Version](https://badge.fury.io/rb/middleman-disqus.png)](http://badge.fury.io/rb/middleman-disqus)
 [![Dependency Status](https://gemnasium.com/simonrice/middleman-disqus.png)](https://gemnasium.com/simonrice/middleman-disqus) 
 [![Code Climate](https://codeclimate.com/github/simonrice/middleman-disqus.png)](https://codeclimate.com/github/simonrice/middleman-disqus)
