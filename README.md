@@ -1,5 +1,6 @@
 # Middleman Disqus
 
+[![Gem Version](https://badge.fury.io/rb/middleman-disqus.png)](http://badge.fury.io/rb/middleman-disqus)
 [![Dependency Status](https://gemnasium.com/simonrice/middleman-disqus.png)](https://gemnasium.com/simonrice/middleman-disqus) 
 [![Code Climate](https://codeclimate.com/github/simonrice/middleman-disqus.png)](https://codeclimate.com/github/simonrice/middleman-disqus)
 
@@ -22,7 +23,7 @@ activate :disqus do |d|
 end
 ```
 
-Then, in your relevant layout(s), after your footer, call `disqus_tag` and
+Then, in your relevant layout(s), after your footer, call `disqus` and
 include the results in the page.  For example, in HAML:
 
 ```haml
@@ -37,7 +38,7 @@ Or ERB:
 
 ## Only Including Embed Code in Builds
 
-To include the tracking code only in builds, and not when running
+To include the embed code only in builds, and not when running
 `middleman server`, simply add environment-specific configurations in your
 `config.rb`:
 
