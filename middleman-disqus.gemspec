@@ -1,9 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
+require "version"
 
 Gem::Specification.new do |s|
   s.name        = "middleman-disqus"
-  s.version     = "0.0.2"
+  s.version     = Middleman::Disqus::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Simon Rice"]
   s.email       = ["im@simonrice.com"]
@@ -18,7 +19,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # The version of middleman-core your extension depends on
-  s.add_runtime_dependency("middleman-core", [">= 3.0.6"])
+  s.add_runtime_dependency("middleman-core", [">= 3.1.0"])
 
   # Additional dependencies
   # s.add_runtime_dependency("gem-name", "gem-version")

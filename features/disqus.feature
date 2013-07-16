@@ -7,5 +7,4 @@ Feature: Adds a Disqus embed code
       | index.html |
             
     And the file "index.html" should contain 'div id="disqus_thread"'
-    And the file "index.html" should contain "var disqus_shortname = 'test-name';"
-    And the file "index.html" should contain '.disqus.com/embed.js'
+    And the file "index.html" should contain "dsq.src = '//test-name.disqus.com/embed.js';"

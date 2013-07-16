@@ -14,3 +14,5 @@ group :test do
   gem "fivemat",  "~> 1.2.1"
   gem "aruba",    "~> 0.5.3"
 end
+
+gem "ruby18_source_location", :platforms => :mri_18
