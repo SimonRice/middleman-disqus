@@ -1,15 +1,18 @@
 language: ruby
 rvm:
-  - 2.0.1
+  - ruby-head
+  - 2.1.2
+  - 2.1.1
+  - 2.1.0
   - 2.0.0
   - 1.9.3
-  - jruby-19mode
+  - rbx-2
   - rbx-19mode
-  - ruby-head
   - jruby-head
-  - ree
+  - jruby-19mode
 
 matrix:
   allow_failures:
     - rvm: ruby-head
     - rvm: jruby-head
+    - rvm: rbx-2
