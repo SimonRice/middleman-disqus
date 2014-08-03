@@ -5,7 +5,6 @@ require "version"
 Gem::Specification.new do |s|
   s.name        = "middleman-disqus"
   s.version     = Middleman::Disqus::VERSION
-  s.platform    = Gem::Platform::RUBY
   s.authors     = ["Simon Rice"]
   s.email       = ["im@simonrice.com"]
   s.homepage    = "http://github.com/simonrice/middleman-disqus"
