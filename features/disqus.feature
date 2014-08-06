@@ -15,14 +15,7 @@ Feature: Disqus Integration
     Then I should see "0" lines
 
   Scenario: Basic usage, Disqus javascript is included when `shotname` is set
-    Given a fixture app "disqus-app"
-    And a file named "config.rb" with:
-      """
-      activate :disqus do |d|
-        d.shortname = 'test-name'
-      end
-      """
-    And a successfully built app at "disqus-app"
+    Given a successfully built app at "disqus-app"
     When I cd to "build"
     Then the following files should exist:
       | index.html |
