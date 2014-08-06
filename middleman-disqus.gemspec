@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "version"
+require "middleman-disqus/version"
 
 Gem::Specification.new do |s|
   s.name        = "middleman-disqus"
@@ -8,17 +8,16 @@ Gem::Specification.new do |s|
   s.authors     = ["Simon Rice"]
   s.email       = ["im@simonrice.com"]
   s.homepage    = "http://github.com/simonrice/middleman-disqus"
-  s.license     = 'MIT'
-  s.summary     = %q{A Middleman plugin for adding the Disqus embed code.}
-  # s.description = %q{A longer description of your extension}
+  s.license     = "MIT"
+  s.summary     = %q{Quickly integrate Disqus comments into your Middleman site}
+  s.description = <<-EOL
+A Middleman extension to integrate Disqus into your site,
+supporting Disqus configuration variables and comment counts.
+EOL
 
   s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.test_files    = `git ls-files -- {features,fixtures}/*`.split("\n")
   s.require_paths = ["lib"]
 
-  # The version of middleman-core your extension depends on
-  s.add_runtime_dependency("middleman-core", [">= 3.1.0"])
-
-  # Additional dependencies
-  # s.add_runtime_dependency("gem-name", "gem-version")
+  s.add_runtime_dependency("middleman-core", ["~> 3.1"])
 end

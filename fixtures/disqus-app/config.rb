@@ -1,3 +1,3 @@
 activate :disqus do |d|
-  d.shortname = "test-name"
+  d.shortname = 'test-name'
 end
