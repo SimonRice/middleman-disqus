@@ -11,25 +11,29 @@ module Middleman
     end
 
     def self.options(options = {})
-      @@options.to_h.merge(options)
+      options = options.to_h.map do |k,obj|
+        k =~ /^disqus_(.*)$/ ? [$1, obj] : nil
+      end
+      options = Hash[options]
+      @@options.to_h.merge(options).with_indifferent_access
     end
 
     helpers do
       def disqus
-        @options = Middleman::DisqusExtension.options({})
+        page_options = current_resource.metadata[:page]
+        @options = Middleman::DisqusExtension.options(page_options)
         return '' unless @options[:shortname]
 
         file = File.join(File.dirname(__FILE__), 'embed.erb')
-        ERB.new(File.read(file)).result(binding)
+        ERB.new(File.read(file), 0, '>').result(binding)
       end
 
       def disqus_count
-        @options = Middleman::DisqusExtension.options({})
+        @options = Middleman::DisqusExtension.options
         return '' unless @options[:shortname]
-        #current_resource.metadata[:page].merge(disqus_settings)
 
         file = File.join(File.dirname(__FILE__), 'count.erb')
-        ERB.new(File.read(file)).result(binding)
+        ERB.new(File.read(file), 0, '>').result(binding)
       end
     end
 

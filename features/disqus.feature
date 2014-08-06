@@ -48,3 +48,23 @@ Feature: Disqus Integration
     And the file "options.html" should contain "var disqus_url = 'http://example.com/2012/the-best-day-of-my-life.html';"
     And the file "options.html" should contain "var disqus_category_id = 4;"
     And the file "options.html" should contain "var disqus_disable_mobile = true;"
+
+  Scenario: Only set a couple of per page Disqus variables
+    Given a fixture app "disqus-app"
+    And a file named "source/options.html.erb" with:
+      """
+      ---
+      disqus_category_id: 4
+      disqus_disable_mobile: false
+      ---
+      <%= disqus %>
+      """
+    And a successfully built app at "disqus-app"
+    When I cd to "build"
+    Then the following files should exist:
+      | options.html |
+    And the file "options.html" should not contain "var disqus_identifier"
+    And the file "options.html" should not contain "var disqus_title"
+    And the file "options.html" should not contain "var disqus_url"
+    And the file "options.html" should contain "var disqus_category_id = 4;"
+    And the file "options.html" should contain "var disqus_disable_mobile = false;"
