@@ -12,7 +12,7 @@ Feature: Disqus Integration
     When I go to "/"
     Then I should see "0" lines
 
-  Scenario: The Disqus embed code is added with the configured short name
+  Scenario: The Disqus embed code is added with configured shortname
     Given a fixture app "disqus-app"
     And a file named "config.rb" with:
       """
@@ -25,4 +25,4 @@ Feature: Disqus Integration
     Then the following files should exist:
       | index.html |
     And the file "index.html" should contain 'div id="disqus_thread"'
-    And the file "index.html" should contain "dsq.src = '//test-name.disqus.com/embed.js';"
+    And the file "index.html" should contain "var disqus_shortname = 'test-name';"
