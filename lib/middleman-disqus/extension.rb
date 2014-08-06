@@ -11,7 +11,7 @@ module Middleman
     end
 
     def self.options(options = {})
-      options = options.to_h.map do |k,obj|
+      options = options.to_hash.map do |k,obj|
         k =~ /^disqus_(.*)$/ ? [$1, obj] : nil
       end
       options = Hash[options.compact]
