@@ -32,12 +32,12 @@ Feature: Disqus Integration
       """
       ---
       disqus_identifier: /2012/the-best-day-of-my-life.html
-			disqus_title: The best day of my life
-			disqus_url: http://example.com/2012/the-best-day-of-my-life.html
-			disqus_category_id: 4
-			disqus_disable_mobile: true
+      disqus_title: The best day of my life
+      disqus_url: http://example.com/2012/the-best-day-of-my-life.html
+      disqus_category_id: 4
+      disqus_disable_mobile: true
       ---
-			<%= disqus %>
+      <%= disqus %>
       """
     And a successfully built app at "disqus-app"
     When I cd to "build"
