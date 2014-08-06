@@ -25,3 +25,26 @@ Feature: Disqus Integration
     And the file "index.html" should contain 'disqus.com/embed.js'
     And the file "count.html" should contain "var disqus_shortname = 'test-name';"
     And the file "count.html" should contain 'disqus.com/count.js'
+
+  Scenario: Per page Disqus variables
+    Given a fixture app "disqus-app"
+    And a file named "source/options.html.erb" with:
+      """
+      ---
+      disqus_identifier: /2012/the-best-day-of-my-life.html
+			disqus_title: The best day of my life
+			disqus_url: http://example.com/2012/the-best-day-of-my-life.html
+			disqus_category_id: 4
+			disqus_disable_mobile: true
+      ---
+			<%= disqus %>
+      """
+    And a successfully built app at "disqus-app"
+    When I cd to "build"
+    Then the following files should exist:
+      | options.html |
+    And the file "options.html" should contain "var disqus_identifier = '/2012/the-best-day-of-my-life.html';"
+    And the file "options.html" should contain "var disqus_title = 'The best day of my life';"
+    And the file "options.html" should contain "var disqus_url = 'http://example.com/2012/the-best-day-of-my-life.html';"
+    And the file "options.html" should contain "var disqus_category_id = 4;"
+    And the file "options.html" should contain "var disqus_disable_mobile = true;"
