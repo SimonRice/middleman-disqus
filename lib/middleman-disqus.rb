@@ -28,6 +28,24 @@ class Disqus < ::Middleman::Extension
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
       }
     end
+
+    def disqus_count
+      return '' unless disqus_shortname
+      %Q{
+        <script type="text/javascript">
+        //<![CDATA[
+            var disqus_shortname = '#{disqus_shortname}';
+
+            (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+            }());
+        //]]>
+        </script>
+      }      
+    end
   end
 
 end
