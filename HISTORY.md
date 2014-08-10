@@ -1,4 +1,4 @@
-## 1.0.0 (TBD)
+## 1.0.0 (2014-08-06)
 
 * Add support for Disqus JavaScript configuration variables using per page
   YAML Frontmatter.
