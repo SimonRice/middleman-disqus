@@ -103,7 +103,7 @@ Middleman's [environment specific settings][ess], for example:
 
 ```ruby
 # config.rb
-configure :development do |d|
+configure :development do
   activate :disqus do |d|
     # using a special shortname
     d.shortname = "development-shortname"
