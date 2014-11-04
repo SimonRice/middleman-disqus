@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in middleman-google-analytics.gemspec
+# Specify your gem's dependencies in middleman-disqus.gemspec
 gemspec
 
 group :development do

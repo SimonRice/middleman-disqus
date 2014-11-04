@@ -19,8 +19,8 @@ module Middleman
     end
 
     helpers do
-      def disqus
-        page_options = current_resource.metadata[:page]
+      def disqus(call_options)
+        page_options = current_resource.metadata[:page].merge(call_options)
         @options = Middleman::DisqusExtension.options(page_options)
         return '' unless @options[:shortname]
 
