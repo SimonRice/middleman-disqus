@@ -68,3 +68,31 @@ Feature: Disqus Integration
     And the file "options.html" should not contain "var disqus_url"
     And the file "options.html" should contain "var disqus_category_id = 4;"
     And the file "options.html" should contain "var disqus_disable_mobile = false;"
+
+  Scenario: Per call Disqus variables
+    Given a fixture app "disqus-app"
+    And a file named "source/per-call-options.html.erb" with:
+      """
+      <%= disqus disqus_url: "http://example.com/2012/the-best-day-of-my-life.html" %>
+      """
+    And a successfully built app at "disqus-app"
+    When I cd to "build"
+    Then the following files should exist:
+      | per-call-options.html |
+    And the file "per-call-options.html" should contain "var disqus_url = 'http://example.com/2012/the-best-day-of-my-life.html';"
+
+  Scenario: Per call Disqus variables overriding page variables
+    Given a fixture app "disqus-app"
+    And a file named "source/per-call-options.html.erb" with:
+      """
+      ---
+      disqus_identifier: /2012/the-best-day-of-my-life.html
+      disqus_url: http://example.com/2012/better-day-of-my-life.html
+      ---
+      <%= disqus disqus_url: "http://example.com/2012/the-best-day-of-my-life.html" %>
+      """
+    And a successfully built app at "disqus-app"
+    When I cd to "build"
+    Then the following files should exist:
+      | per-call-options.html |
+    And the file "per-call-options.html" should contain "var disqus_url = 'http://example.com/2012/the-best-day-of-my-life.html';"
