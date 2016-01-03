@@ -1,9 +1,9 @@
 # Middleman Disqus
 
-[![Build Status](https://travis-ci.org/simonrice/middleman-disqus.png)](https://travis-ci.org/simonrice/middleman-disqus)
-[![Gem Version](https://badge.fury.io/rb/middleman-disqus.png)](http://badge.fury.io/rb/middleman-disqus)
-[![Dependency Status](https://gemnasium.com/simonrice/middleman-disqus.png)](https://gemnasium.com/simonrice/middleman-disqus)
-[![Code Climate](https://codeclimate.com/github/simonrice/middleman-disqus.png)](https://codeclimate.com/github/simonrice/middleman-disqus)
+[![Build Status](https://travis-ci.org/simonrice/middleman-disqus.svg)](https://travis-ci.org/simonrice/middleman-disqus)
+[![Gem Version](https://badge.fury.io/rb/middleman-disqus.svg)](http://badge.fury.io/rb/middleman-disqus)
+[![Dependency Status](https://gemnasium.com/simonrice/middleman-disqus.svg)](https://gemnasium.com/simonrice/middleman-disqus)
+[![Code Climate](https://codeclimate.com/github/simonrice/middleman-disqus.svg)](https://codeclimate.com/github/simonrice/middleman-disqus)
 
 Middleman-Disqus is a [Middleman](https://github.com/middleman/middleman)
 extension that generates the Disqus embed code, and keeps your config
