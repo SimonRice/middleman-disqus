@@ -12,4 +12,5 @@ end
 group :test do
   gem 'rspec', '~> 3.4'
   gem 'capybara', '~> 2.5'
+  gem 'selenium-webdriver', '~> 2.48'
 end

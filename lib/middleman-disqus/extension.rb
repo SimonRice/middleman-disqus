@@ -1,8 +1,8 @@
-require "middleman-core"
+require 'middleman-core'
 
 module Middleman
   class DisqusExtension < Extension
-    option :shortname, nil, "Your short name for Disqus"
+    option :shortname, nil, 'Your short name for Disqus'
 
     def initialize(app, options_hash={}, &block)
       super
@@ -36,6 +36,5 @@ module Middleman
         ERB.new(File.read(file), 0, '>').result(binding)
       end
     end
-
   end
 end
