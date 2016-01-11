@@ -1,3 +1,8 @@
+## 1.2.0 (2016-01-06)
+
+* Add support for Middleman v4 (please continue to use middleman-disqus 1.1 if you need v3 support).
+* Moved all tests from Cucumber to Capybara / RSpec.
+
 ## 1.0.0 (2014-08-06)
 
 * Add support for Disqus JavaScript configuration variables using per page

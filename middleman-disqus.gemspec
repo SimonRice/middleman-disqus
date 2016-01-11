@@ -15,8 +15,8 @@ A Middleman extension to integrate Disqus into your site,
 supporting Disqus configuration variables and comment counts.
 EOL
 
-  s.files         = `git ls-files`.split('\n')
-  s.test_files    = `git ls-files -- {features,fixtures}/*`.split('\n')
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {features,fixtures}/*`.split("\n")
   s.require_paths = ['lib']
 
   s.add_runtime_dependency('middleman-core', ['~> 4.0'])
