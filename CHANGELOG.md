@@ -1,4 +1,4 @@
-## 1.2.0 (2016-01-06)
+## 1.2.0 (2016-01-11)
 
 * Add support for Middleman v4 (please continue to use middleman-disqus 1.1 if you need v3 support).
 * Moved all tests from Cucumber to Capybara / RSpec.
