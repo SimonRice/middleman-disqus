@@ -5,6 +5,9 @@ rvm:
   - 2.1
   - 2.0
   - jruby-head
+before_install:
+- gem update --system
+- gem update bundler
 
 matrix:
   allow_failures:
