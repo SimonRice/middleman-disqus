@@ -1,4 +1,6 @@
 require 'middleman-core'
+require 'active_support'
+require 'active_support/core_ext/hash/indifferent_access'
 
 module Middleman
   class DisqusExtension < Extension
